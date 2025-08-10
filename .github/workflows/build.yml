@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-22.04
 
     outputs:
-      FRIDA_VERSION: ${{ steps.pullFridaLatestRelease.outputs.FRIDA_VERSION }}
-      ALREADY_RELEASE: ${{ steps.checkReleaseVersion.outputs.ALREADY_RELEASE }}
+      FRIDA_VERSION: "16.7.19"
+      ALREADY_RELEASE: "16.7.19"
     steps:
       - name: Pull Frida Latest Release
         id: pullFridaLatestRelease
@@ -85,7 +85,7 @@ jobs:
       with:
         node-version: 18
 
-    - uses: fusion-engineering/setup-git-credentials@v2
+    - uses: de-vri-es/setup-git-credentials@v2
       with:
         credentials: ${{secrets.GIT_CREDENTIALS}}
 
